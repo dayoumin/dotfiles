@@ -10,11 +10,12 @@
 | `.claude/mcp.json` | Claude MCP 설정 (playwright, stitch) |
 | `.claude/CLAUDE.md` | 전역 개발 규칙 |
 | `.claude/agents/` | Playwright Test 에이전트 정의 |
+| `.claude/skills/` | 전역 스킬 (스킬 생성, 에이전트 생성 등) |
 
 ## 설치
 
 ```bash
-git clone https://github.com/USERNAME/dotfiles ~/dotfiles
+git clone https://github.com/dayoumin/dotfiles ~/dotfiles
 cd ~/dotfiles
 ./install.sh
 ```

@@ -51,6 +51,13 @@ if [ -d "$HOME/.claude/agents" ] && [ ! -L "$HOME/.claude/agents" ]; then
 fi
 setup_symlink "$DOTFILES_DIR/.claude/agents" "$HOME/.claude/agents"
 
+# 6. ~/.claude/skills 디렉토리 연결 (전역 스킬)
+if [ -d "$HOME/.claude/skills" ] && [ ! -L "$HOME/.claude/skills" ]; then
+    echo "📦 백업 생성: $HOME/.claude/skills"
+    mv "$HOME/.claude/skills" "$BACKUP_DIR/"
+fi
+setup_symlink "$DOTFILES_DIR/.claude/skills" "$HOME/.claude/skills"
+
 # 백업 디렉토리가 비어있으면 삭제
 if [ -z "$(ls -A "$BACKUP_DIR" 2>/dev/null)" ]; then
     rmdir "$BACKUP_DIR"
@@ -67,3 +74,4 @@ echo "   - ~/.mcp.json (MCP 서버 설정)"
 echo "   - ~/.claude/mcp.json (Claude MCP 설정)"
 echo "   - ~/.claude/CLAUDE.md (전역 개발 규칙)"
 echo "   - ~/.claude/agents/ (에이전트 정의)"
+echo "   - ~/.claude/skills/ (전역 스킬)"
