@@ -1,0 +1,28 @@
+# 민감한 정보
+.credentials.json
+*.secret
+*.key
+
+# 로컬 환경 설정 (API 키 등)
+.local_env
+
+# 캐시 및 임시 파일
+cache/
+debug/
+file-history/
+shell-snapshots/
+statsig/
+telemetry/
+todos/
+plans/
+projects/
+plugins/
+ide/
+
+# 로그 및 히스토리
+*.jsonl
+stats-cache.json
+
+# OS 파일
+.DS_Store
+Thumbs.db

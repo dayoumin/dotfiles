@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    },
+    "stitch": {
+      "command": "npx",
+      "args": ["@_davideast/stitch-mcp@latest", "proxy"]
+    }
+  }
+}
